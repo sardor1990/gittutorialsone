@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
+<a href="{{ route('cars.index') }}" class="btn btn-dark "><-Go Back</a>
         <div class="about-banner">
             <div class="container text-center text-white   py-5">
                 <h1>Add Your Cars</h1>

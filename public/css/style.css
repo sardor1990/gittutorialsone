@@ -16,17 +16,24 @@
     margin: 0;
 }
 
-
-
-
-
 #bg-box {
-    background-color:black ;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: linear-gradient(180deg, rgba(28, 28, 31, 0.92), rgba(28, 28, 31, 0.92));
+    border-radius: 10px;
     min-height: 200px;
     position: relative;
+    transition: all 1s ease-in;
+    animation-name: bgbox;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+}
+#bg-box:hover{
+    background-image: linear-gradient(180deg,rgba(188, 188, 192, 0.42), rgba(28, 28, 31, 0.92), rgba(28, 28, 31, 0.92),rgba(188, 185, 185, 0.47));   
+}
+
+@keyframes bgbox {
+    0% {
+        transform: scaleX(10);
+    }   
 }
 .dark-overlay {
     position: absolute;
@@ -135,6 +142,7 @@ footer{
         transform: translateX(0) translateY(0);
     }
 }
+
 #home-icons{
     transition: all 1s ease-in;
     animation-name: homeicon;
@@ -143,12 +151,7 @@ footer{
 }
 @keyframes homeicon {
     0% {
-        transform: translatex(0) translateY(-150px);
-    }
-
-
-    100% {
-        transform: translateX(0) translateY(0);
+        transform: scaleX(10);
     }
 }
 .bi{
@@ -287,4 +290,23 @@ img{
 }
 .form-group{
     color: #dbe2e3;
+}
+.box{
+    border: 1px solid rgb(15, 14, 14);
+    border-radius: 5px;
+}
+
+.box:hover{
+    transition: all 1s ease-in;
+    animation-name: boxhover;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    background-image: linear-gradient(180deg, rgba(247, 247, 250, 0.52),rgba(247, 247, 250, 0.42), rgba(82, 80, 80, 0.37));
+}
+
+@keyframes boxhover {
+   
+    100%{
+        transform: skewX(-10deg);
+    }
 }

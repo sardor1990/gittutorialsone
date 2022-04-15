@@ -27,7 +27,7 @@ class CarController extends Controller
      */
     public function index()
     {
-        $cars =Car::orderByDesc('created_at')->paginate(20);
+        $cars =Car::orderByDesc('created_at')->paginate(12);
         return view('cars.index',[
             'cars'=>$cars
         ]);

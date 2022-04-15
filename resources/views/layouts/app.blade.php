@@ -17,50 +17,43 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
     <div id="app">
         
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark " style="height:80px;">
-            <div class="container">
-                    <a class="navbar-brand" href="{{ route('home') }}">
-                        {{  __('Home') }}
-                    </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="/about" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        About Us
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="/about">About Our Company</a></li>
-                                        <li><a class="dropdown-item" href="{{ route('cars.index') }}">About Cars</a></li>
-                                        <li><a class="dropdown-item" href="{{ route('cars.create') }}">Create your cars</a></li>
-                                        <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                 </ul>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/posts">Blogs</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/servises">Servises</a>
-                                </li>
-                                
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="{{ route('home') }}">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+           
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="/about" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> About Us </a>
+               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                   <li><a class="dropdown-item" href="/about">About Our Company</a></li>
+                   <li><a class="dropdown-item" href="{{ route('cars.index') }}">About Cars</a></li>
+                   <li><a class="dropdown-item" href="{{ route('cars.create') }}">Create your cars</a></li>
+                   <li><hr class="dropdown-divider"></li>
+               </ul>
+            </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/posts">Blogs</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/servises">Servises</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
                         @guest
 
@@ -96,13 +89,17 @@
                             </li>
                         @endguest
                     </ul>
-                </div>
-            </div>
-        </nav>
+          </div>
+    </div>
+</nav>
+
+
+       
         <div class="container">
             <main class="py-4">
                 @include('inc.massages')
                 @yield('content')
+                
             </main>
         </div>
         
